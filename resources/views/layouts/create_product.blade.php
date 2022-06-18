@@ -18,9 +18,10 @@
             <label for="productName" class="form-label">Product name</label>
             <input type="text" class="form-control" id="productName" placeholder="product name" name="name">
         </div>
-        <div class="form-group mb-3">
-            <label for="barcode" class="form-label">Barcode</label>
-            <input type="text" class="form-control" id="barcode" placeholder="1234567890" name="barcode">
+        <label for="barcode" class="form-label">Barcode</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="barcode" placeholder="1234567890" name="barcode" aria-describedby="btnGenerate">
+            <button class="btn btn-outline-secondary" type="button" id="btnGenerate">Generate</button>
         </div>
         <div class="row">
             <div class="form-group mb-3 col">

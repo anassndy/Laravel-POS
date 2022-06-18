@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <div class="container pt-3 pl-4">
-        <div class="row d-flex justify-content-start align-items-center">
+        <div class="row d-flex flex-wrap justify-content-start align-items-center">
             <img src="{{ asset('images/image1.jpg') }}" 
             alt="" srcset=""
             style="vertical-align: middle;
@@ -8,7 +8,7 @@
             height: 40px;
             object-fit: cover;
             border-radius: 50%;">
-            <span class="text-white ml-2" style="font-weight: 600;">{{ config('app.name') }}</span>
+            <span class="text-white mx-2" style="font-weight: 600;">{{ config('app.name') }}</span>
         </div>
     </div>
     <hr>

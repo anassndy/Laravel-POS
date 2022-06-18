@@ -31,8 +31,8 @@
                     <td scope="col">{{ $product->quantity }}</td>
                     <td scope="col">
                         <div class="row flex-wrap  pr-3">
-                            <div class="btn btn-success btn-sm ml-1">View</div>
-                            <div class="btn btn-warning btn-sm ml-1">Edit</div>
+                            <div class="btn btn-success btn-sm ml-1"><a href="{{ route('product.details', $product->id) }}" class="text-white">View</a></div>
+                            <div class="btn btn-warning btn-sm ml-1"><a href="/products/edit/{{ $product->id }}" class="text-white">Edit</a></div>
                             <div class="btn btn-danger btn-sm ml-1">Delete</div>
                         </div>
                     </td>

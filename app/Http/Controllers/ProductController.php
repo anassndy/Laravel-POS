@@ -54,7 +54,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = ProductModel::FindOrFail($id);
+        return view('layouts.product_details', ['product'=>$product,]);
     }
 
     /**
@@ -65,7 +66,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = ProductModel::FindOrFail($id);
+        return view('layouts.update_product', ['product'=>$product,]);
     }
 
     /**
@@ -77,7 +79,14 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = ProductModel::find($id);
+        $product->name = $request->name;
+        $product->barcode = $request->barcode;
+        $product->buy = $request->buy;
+        $product->sale = $request->sale;
+        $product->quantity = $request->quantity;
+        $product->save();
+        return redirect()->route('products');
     }
 
     /**

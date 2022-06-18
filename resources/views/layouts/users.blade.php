@@ -26,10 +26,13 @@
                     <td scope="col">{{ $user->email }}</td>
                     <td scope="col">{{ $user->created_at }}</td>
                     <td scope="col">
-                        <div class="row flex-wrap  pr-3">
-                            <div class="btn btn-success btn-sm ml-1">View</div>
+                        <div class="row flex-wrap pr-3">
                             <div class="btn btn-warning btn-sm ml-1">Edit</div>
-                            <div class="btn btn-danger btn-sm ml-1">Delete</div>
+                            <form action="/users/{{ $user->id }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm ml-1">Delete</button>
+                            </form>
                         </div>
                     </td>
                 </tr>
